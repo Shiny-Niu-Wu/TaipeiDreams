@@ -1,0 +1,206 @@
+@font-face {
+  font-family: "Taipei Sans";
+  src: url("TaipeiSansTCBeta-Bold.ttf") format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Taipei Sans Light";
+  src: url("TaipeiSansTCBeta-Light.ttf") format("truetype");
+  font-style: lighter;
+}
+
+@font-face {
+  font-family: "Taipei Sans";
+  src: url("TaipeiSansTCBeta-Regular.ttf") format("truetype");
+  font-weight: normal;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  background-color: #67666C;
+}
+
+#navigationGroup{
+  position: fixed;
+  top: 1em;
+  left: 1em;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 90vh;
+}
+
+a{
+  text-decoration: none;
+  color: #bbbbbb;
+  font-family: "Taipei Sans";
+  font-weight: lighter;
+  font-size: 14;
+  outline: none;
+  padding-right: 1.3em;
+  padding-bottom: 0.4em;
+  line-height: normal;
+}
+
+a.navigationLink:hover{
+  line-height: 3;
+  color: white;
+}
+
+#emptyDiv{
+  width: 100vw;
+  height: 100vw;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+
+#filterGroup{
+  /* when figure out sticky function, delete below */
+  position: fixed;
+  top: 2vh;
+  left: 20%;
+  display: flex;
+  flex-direction: row;
+}
+
+.filterBubble{
+  color: #bbbbbb;
+  padding: 2em;
+  font-family: "Taipei Sans";
+  font-weight: lighter;
+  font-size: 14px;
+}
+
+.filterBubble:hover{
+  color: white;
+}
+
+#storyGroup{
+  position: absolute;
+  top: 100vh;
+  left: 10%;
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+}
+
+.text{
+  display: flex;
+  flex-direction: column;
+}
+
+/* .anchor {
+  position: absolute;
+  transform: translateY(-50vh);
+} */
+
+/* english text */
+.textE{
+  /* color: #67666C; */
+  color: rgba(104, 103, 109, 0);
+  background-color: #67666C;
+  /* overflow-wrap: break-word;
+  word-wrap: break-word; */
+  font-size: 14px;
+  font-family: "Taipei Sans";
+  font-weight: normal;
+  padding: 1em;
+  /* width: 50vw; */
+  /* padding-left: 15em;
+  padding-right: 15em; */
+}
+
+.textE::selection{
+  background-color: #9BB23E;
+  color: rgba(104, 103, 109, 1);
+}
+
+.revealE{
+  color: #bbbbbb;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.revealE::selection{
+  background-color: #9BB23E;
+}
+
+/* mandarin text */
+.textM{
+  /* color: #67666C; */
+  color: rgba(104, 103, 109, 0);
+  font-size: 35px;
+  font-family: "Taipei Sans";
+  font-weight: bold;
+  padding: 1em;
+  letter-spacing: 10px;
+  line-height: 1.5em;
+}
+
+.textM::selection{
+  background-color: #E58FB2;
+  color: rgba(104, 103, 109, 1);
+}
+
+.revealM{
+  color: white;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.revealM::selection{
+  background-color: #E58FB2;
+}
+
+#aboutLink{
+  position: fixed;
+  bottom: 10%;
+  right: 0.2em;
+  transform: rotate(-90deg);
+  color: #bbbbbb;
+  font-size: 14px;
+  font-family: "Taipei Sans";
+  font-weight: normal;
+}
+
+#aboutLink:hover{
+  color: white;
+}
+
+#down-arrow{
+  position: fixed;
+  right: 1em;
+  top: 90vh;
+  font-size: 28px;
+  color: white;
+}
+
+#back-arrow{
+  position: fixed;
+  left: 1em;
+  top: 86vh;
+  font-size: 28px;
+  color: white;
+}
+
+a#back-arrow:hover{
+  line-height: normal;
+  font-size: 35px;
+}
+
+#cover{
+  width: 50vw;
+  height: auto;
+  position: fixed;
+  left: 35%;
+  top: 20%;
+  z-index: -1;
+}

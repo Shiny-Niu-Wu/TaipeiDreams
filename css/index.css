@@ -1,0 +1,117 @@
+@font-face {
+  font-family: "Taipei Sans";
+  src: url("TaipeiSansTCBeta-Bold.ttf") format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Taipei Sans Light";
+  src: url("TaipeiSansTCBeta-Light.ttf") format("truetype");
+  font-style: lighter;
+}
+
+@font-face {
+  font-family: "Taipei Sans";
+  src: url("TaipeiSansTCBeta-Regular.ttf") format("truetype");
+  font-weight: normal;
+}
+
+body{
+  background-color: #67666C;
+}
+
+#frame{
+  position: absolute;
+  left: 19%;
+  top: 10%;
+  width: 60vw;
+  height: 70vh;
+  border: 5px double white;
+}
+
+#storyGroup{
+
+}
+
+.text{
+  z-index: 1;
+  position: absolute;
+  left: 20%;
+  top: 10%;
+  width: 60vw;
+  height: 40vh;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+/* mandarin text */
+.textM{
+  z-index: 2;
+  /* color: #67666C; */
+  color: rgba(104, 103, 109, 0);
+  font-size: 14px;
+  font-family: "Taipei Sans";
+  font-weight: bold;
+  letter-spacing: 8px;
+  line-height: 1.5em;
+  margin: 0;
+  padding: 1em;
+
+  /* disable selection  */
+  user-select: none;
+   -webkit-user-select: none;
+   -khtml-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+}
+
+.revealM{
+  color: white;
+  cursor: grab;
+}
+
+.revealM:hover{
+  color: #9BB23E;
+}
+
+.revealM:active{
+  /* color: #bbbbbb; */
+  font-size: 16px;
+}
+
+#instruction{
+  position: absolute;
+  bottom: 5%;
+  right: 0.1em;
+  transform: rotate(-90deg);
+  color: #bbbbbb;
+  font-size: 14px;
+  font-family: "Taipei Sans";
+  font-weight: normal;
+}
+
+#enterDiv{
+  position: absolute;
+  top: 7%;
+  left: 1em;
+  z-index: 1;
+  margin: 0;
+}
+
+#enterText{
+  line-height: 1.5em;
+  z-index: 2;
+  text-decoration: none;
+  color: white;
+  font-family: "Taipei Sans";
+  outline: none;
+}
+
+#enterText:hover{
+  color: #E58FB2;
+  cursor: grab;
+}
+
+#enterMandarin{
+  letter-spacing: 0.55em;
+}
