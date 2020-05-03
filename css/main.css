@@ -17,11 +17,13 @@
 }
 
 html{
-  scroll-behavior: smooth;
+  /* scroll-behavior: smooth; */
 }
 
 body{
   background-color: #67666C;
+  /* parent needs to have a set height for the sticky child to work  */
+  height: 7100vh;
 }
 
 #navigationGroup{
@@ -56,66 +58,122 @@ a.navigationLink:hover{
   height: 100vw;
 }
 
-.sticky {
+/* .sticky {
   position: fixed;
   top: 0;
   width: 100%
+} */
+
+.dream{
+  position: sticky;
+  position: -webkit-sticky;
+  top: 1vh;
+  left: 35%;
+  width: 49vw;
+  height: 10vh;
+
+  /* z-index is important for the sticky element to have hover effect */
+  z-index: 5;
+
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  text-align: justify;
+  border: 1.5px solid white;
+  padding: 5px;
+  color: white;
+  font-family: "Taipei Sans";
+  font-weight: lighter;
+  font-size: 18px;
+  line-height: 1.2em;
+  background-color: white;
+
+  /* disable selection  */
+  user-select: none;
+   -webkit-user-select: none;
+   -khtml-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
 }
 
-#filterGroup{
-  /* when figure out sticky function, delete below */
-  position: fixed;
-  top: 2vh;
-  left: 20%;
-  display: flex;
-  flex-direction: row;
-}
-
-.filterBubble{
+.dream:hover{
+  background-color: transparent;
   color: #bbbbbb;
-  padding: 2em;
+  cursor: pointer;
+}
+
+#stereotypeGroup{
+  width: 70%;
+  position: fixed;
+  left: 15%;
+  bottom: 1vh;
+  z-index: 1;
+  /* display: inline; */
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  text-align: justify;
+
+  /* disable selection  */
+  user-select: none;
+   -webkit-user-select: none;
+   -khtml-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+}
+
+.stereotype{
+  color: #bbbbbb;
+  font-family: "Taipei Sans";
+  font-weight: lighter;
+  font-size: 11.5px;
+}
+
+/* .filterBubble{
+  color: #bbbbbb;
+  padding: 1em;
   font-family: "Taipei Sans";
   font-weight: lighter;
   font-size: 14px;
-}
-
-.filterBubble:hover{
-  color: white;
-}
+} */
 
 #storyGroup{
   position: absolute;
-  top: 100vh;
-  left: 10%;
+  top: 200vh;
+  left: 15%;
   display: flex;
   flex-direction: column;
-  padding: 1em;
+  /* padding: 1em; */
 }
 
 .text{
   display: flex;
   flex-direction: column;
+  /* margin-bottom: 100vh; */
 }
 
-/* .anchor {
-  position: absolute;
-  transform: translateY(-50vh);
-} */
+.anchor{
+  padding-top: 15vh;
+  margin-top: -15vh;
+}
 
 /* english text */
 .textE{
   /* color: #67666C; */
   color: rgba(104, 103, 109, 0);
-  background-color: #67666C;
+  /* background-color: #67666C; */
   /* overflow-wrap: break-word;
   word-wrap: break-word; */
   font-size: 14px;
   font-family: "Taipei Sans";
   font-weight: normal;
-  padding: 1em;
+  padding-left: 20.6vw;
+  padding-bottom: 2em;
+  width: 49.6vw;
+  margin: 0;
+  line-height: 1.25em;
   /* width: 50vw; */
   /* padding-left: 15em;
   padding-right: 15em; */
+  z-index: 1;
 }
 
 .textE::selection{
@@ -140,9 +198,12 @@ a.navigationLink:hover{
   font-size: 35px;
   font-family: "Taipei Sans";
   font-weight: bold;
-  padding: 1em;
+  /* padding: 1em; */
+  padding-bottom: 2em;
+  margin: 0;
   letter-spacing: 10px;
   line-height: 1.5em;
+  z-index: 3;
 }
 
 .textM::selection{
@@ -169,9 +230,18 @@ a.navigationLink:hover{
   font-size: 14px;
   font-family: "Taipei Sans";
   font-weight: normal;
+  z-index: 10;
 }
 
 #aboutLink:hover{
+  color: white;
+}
+
+#up-arrow{
+  position: fixed;
+  right: 1em;
+  top: 72vh;
+  font-size: 28px;
   color: white;
 }
 
@@ -188,12 +258,13 @@ a.navigationLink:hover{
   left: 1em;
   top: 86vh;
   font-size: 28px;
-  color: white;
+  color: #bbbbbb;
 }
 
-a#back-arrow:hover{
-  line-height: normal;
+#back-arrow:hover{
   font-size: 35px;
+  color: white;
+  left: 0.6em;
 }
 
 #cover{
@@ -201,6 +272,15 @@ a#back-arrow:hover{
   height: auto;
   position: fixed;
   left: 35%;
-  top: 20%;
-  z-index: -1;
+  top: 15%;
+  z-index: 1;
+}
+
+hr{
+  width: 70%;
+  position: fixed;
+  left: 15%;
+  bottom: 8vh;
+  z-index: 1;
+  border: 1.5px dashed #bbbbbb;
 }

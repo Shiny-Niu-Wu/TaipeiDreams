@@ -1,17 +1,5 @@
 console.log("script loaded");
 
-//image manipulation
-// var cssApplier;
-// window.onload = function() {
-//     rangy.init();
-//     cssApplier = rangy.createCssClassApplier("area", true); // true turns on normalization
-// };
-// $(function() {
-//   $(document).mouseup(function() {
-//     cssApplier.toggleSelection();
-//   });
-// });
-
 //navigation bar on the left
 document.body.onload = document.getElementById("navigationGroup").append(addNavigation());
 
@@ -34,28 +22,56 @@ document.body.onload = document.getElementById("storyGroup").append(addStories()
 function addStories(){
   let story = new DocumentFragment();
   for (let i = 0; i < stories.length; i++) {
+    let dreamBar = document.createElement("p");
+    dreamBar.setAttribute("class", "dream");
+    dreamBar.append(stories[i].dream);
+    story.append(dreamBar);
+
     let text = document.createElement("div");
     let num = i + 1;
-    text.setAttribute("class", "text");
+    text.setAttribute("class", "text anchor");
     text.setAttribute("id", "text" + num);
-    text.innerHTML = stories[i].english + stories[i].mandarin;
+    text.innerHTML = stories[i].mandarin + stories[i].english;
     story.append(text);
   }
   return story
 }
 
-var filteringStereotypes = document.getElementById("filterGroup");
-var sticky = filteringStereotypes.offsetTop;
+// function enterElement(){
+//   let enterID;
+//   for (let i = 0; i < stories.length; i++) {
+//     let num = i + 1;
+//     enterID = "text" + num.toString() + "E";
+//   }
+//   return enterID
+// }
+//
+// enterView({
+// 	selector: enterElement,
+// 	enter: function(el) {
+// 		console.log('entered', enterElement);
+// 	},
+// 	exit: function(el) {
+//     console.log('exited', enterElement);
+// 	},
+// 	progress: function(el, progress) {
+//     // console.log("the special element's progress is:", progress);
+// 	},
+// 	// offset: 0.5, // enter at middle of viewport
+// 	// once: true, // trigger just once
+// });
 
-function stickyStereotypes() {
-  if (window.pageYOffset >= sticky) {
-  filteringStereotypes.classList.add("sticky")
-  } else {
-  filteringStereotypes.classList.remove("sticky");
-  }
-}
-
-stickyStereotypes();
+// var filteringStereotypes = document.getElementById("filterGroup");
+// var sticky = filteringStereotypes.offsetTop;
+// function stickyStereotypes() {
+//   if (window.pageYOffset >= sticky) {
+//   filteringStereotypes.classList.add("sticky")
+//   } else {
+//   filteringStereotypes.classList.remove("sticky");
+//   }
+// }
+//
+// stickyStereotypes();
 
 //auto scroll webpage
 //let scroll = setInterval(function(){ window.scrollBy(0,1); }, 10);

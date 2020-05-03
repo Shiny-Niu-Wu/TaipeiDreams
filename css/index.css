@@ -20,24 +20,21 @@ body{
   background-color: #67666C;
 }
 
-#frame{
+#storyGroup{
   position: absolute;
   left: 19%;
   top: 10%;
   width: 60vw;
-  height: 70vh;
+  /* height: -webkit-fill-available; */
+  height: 88%;
   border: 5px double white;
-}
-
-#storyGroup{
-
 }
 
 .text{
   z-index: 1;
   position: absolute;
-  left: 20%;
-  top: 10%;
+  left: 1%;
+  top: 1%;
   width: 60vw;
   height: 40vh;
   overflow-wrap: break-word;
@@ -67,16 +64,6 @@ body{
 
 .revealM{
   color: white;
-  cursor: grab;
-}
-
-.revealM:hover{
-  color: #9BB23E;
-}
-
-.revealM:active{
-  /* color: #bbbbbb; */
-  font-size: 16px;
 }
 
 #instruction{
@@ -104,14 +91,26 @@ body{
   text-decoration: none;
   color: white;
   font-family: "Taipei Sans";
+  font-weight: normal;
   outline: none;
+  /* -webkit-text-stroke: 0.3px black; */
 }
 
 #enterText:hover{
   color: #E58FB2;
+  text-shadow: 1px 1px 2px #9BB23E;
   cursor: grab;
 }
 
 #enterMandarin{
   letter-spacing: 0.55em;
+}
+
+hr{
+  border: 1.5px dashed #bbbbbb;
+  position: absolute;
+}
+
+hr#path1{
+  transform-origin: top left;
 }

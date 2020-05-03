@@ -1,3 +1,117 @@
+@font-face {
+  font-family: "Taipei Sans";
+  src: url("TaipeiSansTCBeta-Bold.ttf") format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Taipei Sans Light";
+  src: url("TaipeiSansTCBeta-Light.ttf") format("truetype");
+  font-style: lighter;
+}
+
+@font-face {
+  font-family: "Taipei Sans";
+  src: url("TaipeiSansTCBeta-Regular.ttf") format("truetype");
+  font-weight: normal;
+}
+
 body{
   background-color: #67666C;
+}
+
+#storyBox{
+  border: 5px double white;
+  width: 75%;
+  height: auto;
+  padding: 1em;
+}
+
+.textE{
+  margin: 0;
+  color: #67666C;
+  font-family: "Taipei Sans";
+  font-weight: normal;
+  line-height: 1.2em;
+}
+
+.textE::selection{
+  color: #67666C;
+}
+
+.revealE{
+  color: white;
+}
+
+.revealE::selection{
+  color: #67666C;
+}
+
+.textM{
+  margin: 0;
+  color: #67666C;
+  font-family: "Taipei Sans";
+  font-weight: normal;
+  line-height: 1.2em;
+}
+
+.revealM{
+  color: white;
+}
+
+button{
+  width: auto;
+  height: 40px;
+  padding: 5px;
+  color: white;
+  background-color: #67666C;
+  border: 2.5px solid white;
+  font-family: "Taipei Sans";
+  font-weight: bold;
+  font-size: 18px;
+  text-decoration: none;
+  outline: none;
+}
+
+button:hover{
+  cursor: pointer;
+  color: #67666C;
+  background-color: white;
+}
+
+#entranceLink{
+  position: fixed;
+  bottom: 10%;
+  left: 94%;
+  transform: rotate(-90deg);
+  color: #bbbbbb;
+  font-size: 14px;
+  font-family: "Taipei Sans";
+  font-weight: normal;
+}
+
+#entranceLink:hover{
+  color: white;
+}
+
+#down-arrow{
+  position: fixed;
+  right: 1em;
+  top: 90vh;
+  font-size: 28px;
+  color: white;
+}
+
+#back-arrow{
+  position: fixed;
+  left: 1em;
+  top: 86vh;
+  font-size: 28px;
+  color: #bbbbbb;
+}
+
+#back-arrow:hover{
+  font-size: 35px;
+  color: white;
+  left: 0.6em;
 }
