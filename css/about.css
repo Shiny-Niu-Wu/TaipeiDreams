@@ -16,23 +16,120 @@
   font-weight: normal;
 }
 
+.disableSelection{
+  /* disable selection  */
+  user-select: none;
+   -webkit-user-select: none;
+   -khtml-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+}
+
 body{
   background-color: #67666C;
+  font-family: "Taipei Sans";
+}
+
+#thumbImg{
+  width: 20vw;
+  height: auto;
+  margin: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+#wrapper{
+  display: flex;
+  flex-direction: column;
+  padding: 3em;
+  margin-top: 10vh;
+}
+
+.titleGroup{
+  display: flex;
+  flex-direction: column;
+}
+
+.enteringTaipeiE{
+  margin-bottom: 1em;
+}
+
+.enteringTaipeiM{
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.title{
+  color: white;
+  font-size: 120px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.titleE::selection{
+  background-color: #9BB23E;
+}
+
+.titleM::selection{
+  background-color: #E58FB2;
+}
+
+.titleRight{
+  text-align: right;
+}
+
+.description{
+  color: white;
+  font-size: 14px;
+  margin-left: 30vw;
+  margin-bottom: 20vh;
+}
+
+a{
+  outline: none;
+  text-decoration: none;
+}
+
+#statementLink{
+  line-height: 1.5em;
+  color: #bbbbbb;
+  font-weight: normal;
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 10vh;
+}
+
+#statementLink:hover{
+  color: white;
+  text-decoration: underline;
+}
+
+#erasureGroup{
+  display: flex;
+  flex-direction: row;
 }
 
 #storyBox{
-  border: 5px double white;
-  width: 75%;
+  width: 65%;
   height: auto;
   padding: 1em;
+  border: 1.5px double white;
+  background-color: #67666C;
+  margin-bottom: 5em;
+}
+
+.highlight{
+  color: #67666C;
 }
 
 .textE{
   margin: 0;
-  color: #67666C;
-  font-family: "Taipei Sans";
+  color: white;
   font-weight: normal;
-  line-height: 1.2em;
+  padding-bottom: 2em;
+  word-spacing: 0.3em;
+  line-height: 1.3em;
 }
 
 .textE::selection{
@@ -49,20 +146,28 @@ body{
 
 .textM{
   margin: 0;
-  color: #67666C;
-  font-family: "Taipei Sans";
+  color: white;
   font-weight: normal;
-  line-height: 1.2em;
+  line-height: 1.3em;
+  letter-spacing: 0.3em;
+}
+
+.textM::selection{
+  color: #67666C;
 }
 
 .revealM{
   color: white;
 }
 
+.revealM::selection{
+  color: #67666C;
+}
+
 button{
-  width: auto;
-  height: 40px;
-  padding: 5px;
+  width: 300px;
+  height: auto;
+  padding: 1em;
   color: white;
   background-color: #67666C;
   border: 2.5px solid white;
@@ -71,12 +176,44 @@ button{
   font-size: 18px;
   text-decoration: none;
   outline: none;
+  margin-bottom: 10px;
 }
 
 button:hover{
   cursor: pointer;
   color: #67666C;
   background-color: white;
+}
+
+#changeButton{
+  /* margin-left: 23px; */
+}
+
+#buttonGroup{
+  padding: 2em;
+  padding-top: 0;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+#instruction{
+  text-align: left;
+  padding: 1em;
+  width: 300px;
+  height: auto;
+  color: #67666C;
+  background-color: white;
+  border: 2.5px solid white;
+  font-family: "Taipei Sans";
+  font-weight: normal;
+  font-size: 18px;
+  margin-bottom: 2em;
+}
+
+#instruction p{
+  line-height: 1.2em;
+  text-align: center;
 }
 
 #entranceLink{
@@ -102,6 +239,17 @@ button:hover{
   color: white;
 }
 
+#userCreateHint{
+  position: fixed;
+  right: 6em;
+  top: 89vh;
+  color: #bbbbbb;
+  margin-bottom: 0;
+  text-align: right;
+  font-size: 14px;
+  line-height: 1.4em;
+}
+
 #back-arrow{
   position: fixed;
   left: 1em;
@@ -114,4 +262,24 @@ button:hover{
   font-size: 35px;
   color: white;
   left: 0.6em;
+}
+
+#girlImg{
+  width: 100vw;
+  height: auto;
+}
+
+#text_credit{
+  width: 98vw;
+  color: white;
+  text-align: right;
+  font-size: 10px;
+  margin-top: 5px;
+}
+
+#text_thank{
+  color: white;
+  text-align: center;
+  font-size: 30px;
+  line-height: 1.4em;
 }

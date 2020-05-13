@@ -6,20 +6,78 @@
     <link rel="stylesheet" href="css/about.css">
 
     <!-- Taipei by Fabien Jouin from the Noun Project -->
-    <link rel="icon" href="taipei101.png" type="image/png">
+    <link rel="icon" href="images/taipei101.png" type="image/png">
 
     <script type="text/javascript" src="data.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.3/FileSaver.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
   </head>
   <body>
-    <!-- <input type="text" value="" id="storyBox" /> -->
-    <button type="button" name="button" onclick="changeStory()">change a story 換個故事</button>
-    <p id="storyBox"></p>
 
-    <a href="main.html"><p id="back-arrow">&#8612;</p></a>
+    <a href="main.html"><p id="back-arrow" class="disableSelection">&#8612;</p></a>
+    <a href="index.html"><p id="entranceLink" class="disableSelection">入口 entrance</p></a>
+    <p id="down-arrow" class="disableSelection">&#8615;</p>
+    <p id="userCreateHint" class="disableSelection">Scroll down to create your own<br>erasure poem of Taipei below.<br>創作屬於你自己的台北刪畫詩。</p>
+    <img src="images/thumb101.jpg" alt="thumb" id="thumbImg">
 
-    <a href="index.html"><p id="entranceLink">入口 entrance</p></a>
-    <p id="down-arrow">&#8615;</p>
+    <div id="wrapper">
+      <div class="titleGroup enteringTaipeiE">
+        <p class="title titleE">Entering</p>
+        <p class="title titleE">Taipei</p>
+      </div>
+      <div class="titleGroup enteringTaipeiM">
+        <p class="title titleM">進入台北</p>
+      </div>
+      <p class="description">Here is some text</p>
+
+      <div class="titleGroup enteringTaipeiE">
+        <p class="title titleE titleRight">Assimilating</p>
+        <p class="title titleE titleRight">Taipei</p>
+      </div>
+      <div class="titleGroup enteringTaipeiM">
+        <p class="title titleM">吸收台北</p>
+      </div>
+      <p class="description">Here is some text</p>
+
+      <div class="titleGroup enteringTaipeiE">
+        <p class="title titleE">Reinterpreting</p>
+        <p class="title titleE">Taipei</p>
+      </div>
+      <div class="titleGroup enteringTaipeiM">
+        <p class="title titleM">重釋台北</p>
+      </div>
+      <p class="description">Here is some text</p>
+
+      <a href="https://docs.google.com/document/d/1aQUhMAZzCS3beE1O205dLdx5uL7gHb-PAJhYrwn6z9w/edit?usp=sharing">
+        <p id="statementLink">click here to read full project statement<br>點擊查看完整作品敘述</p>
+      </a>
+
+      <div id="erasureGroup">
+        <div id="storyBox"></div>
+        <div id="buttonGroup" class="disableSelection">
+          <div id="instruction">
+            <p>what are your aspirations?</p>
+            <p>create your own erasure<br>erase by selecting the texts</p>
+            <p>to undo erasure, simply <br>reselect the selected area</p>
+          </div>
+          <button type="button" name="button" onclick="changeStory()" id="changeButton">change a story 換個故事</button>
+          <a class="btn btn-success" href="javascript:void(0);" onclick="generate();">
+            <button type="button" name="button" class="downloadButton">download erasure 下載故事</button>
+          </a>
+        </div>
+      </div>
+
+      <img src="images/girl.jpg" alt="girl" id="girlImg">
+      <p id="text_credit" class="disableSelection">photos shot by me @XiangShan. 2020/02/01</p>
+
+      <p id="text_thank" class="disableSelection">Thank you, Taipei.<br> 謝謝你，台北。</p>
+    </div>
+
 
     <script type="text/javascript" src="js/about.js"></script>
+
   </body>
 </html>
