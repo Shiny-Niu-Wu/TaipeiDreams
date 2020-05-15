@@ -1,11 +1,11 @@
 console.log("script loaded");
 
 var randomStory = stories[Math.floor(Math.random()*stories.length)];
-storyBox = document.getElementById("storyBox").innerHTML = randomStory.english + randomStory.mandarin;
+storyBox = document.getElementById("storyBox").innerHTML = randomStory.mandarin + randomStory.english;
 function changeStory(){
   randomStory = stories[Math.floor(Math.random()*stories.length)];
   //console.log(randomStory);
-  storyBox = document.getElementById("storyBox").innerHTML = randomStory.english + randomStory.mandarin;
+  storyBox = document.getElementById("storyBox").innerHTML = randomStory.mandarin + randomStory.english;
 }
 
 //highlighting code credit to https://jsfiddle.net/Bilalchk123/1o4j0w2v/

@@ -25,6 +25,10 @@
    -ms-user-select: none;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 body{
   background-color: #67666C;
   font-family: "Taipei Sans";
@@ -82,8 +86,17 @@ body{
 .description{
   color: white;
   font-size: 14px;
-  margin-left: 30vw;
-  margin-bottom: 20vh;
+  line-height: 1.5em;
+  word-spacing: 0.1em;
+}
+
+.description span{
+  letter-spacing: 0.1em;
+}
+
+.description::selection{
+  background-color: white;
+  color: #67666C;
 }
 
 a{
@@ -127,7 +140,6 @@ a{
   margin: 0;
   color: white;
   font-weight: normal;
-  padding-bottom: 2em;
   word-spacing: 0.3em;
   line-height: 1.3em;
 }
@@ -150,6 +162,7 @@ a{
   font-weight: normal;
   line-height: 1.3em;
   letter-spacing: 0.3em;
+  padding-bottom: 2em;
 }
 
 .textM::selection{
@@ -206,14 +219,26 @@ button:hover{
   background-color: white;
   border: 2.5px solid white;
   font-family: "Taipei Sans";
-  font-weight: normal;
-  font-size: 18px;
+  font-weight: bold;
+  font-size: 22px;
   margin-bottom: 2em;
 }
 
 #instruction p{
-  line-height: 1.2em;
+  line-height: 1.4em;
   text-align: center;
+}
+
+#instructionE{
+  color: #9BB23E;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+#instructionM{
+  color: #E58FB2;
+  font-size: 14px;
+  font-weight: normal;
 }
 
 #entranceLink{
@@ -241,13 +266,18 @@ button:hover{
 
 #userCreateHint{
   position: fixed;
-  right: 6em;
-  top: 89vh;
+  right: 5em;
+  top: 91vh;
   color: #bbbbbb;
   margin-bottom: 0;
   text-align: right;
   font-size: 14px;
   line-height: 1.4em;
+}
+
+#userCreateHint:hover{
+  color: white;
+  cursor: pointer;
 }
 
 #back-arrow{
@@ -281,5 +311,12 @@ button:hover{
   color: white;
   text-align: center;
   font-size: 30px;
+  line-height: 1.4em;
+}
+
+#text_name{
+  color: white;
+  text-align: center;
+  font-size: 14px;
   line-height: 1.4em;
 }
